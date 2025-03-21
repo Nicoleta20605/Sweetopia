@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sweetopia</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+	<script src="https://use.fontawesome.com/767155eaee.js"></script>
+	<script src="../js/scripts.js"></script>
+</head>
+
+<body onload="getYear()">
+	<div class="header">
+		<div class="logo">
+			<img src="../images/logo.png" alt="Logo" />
+		</div>
+		<div class="nav" id="myNav">
+			<a href="../index.html">Acasă</a>
+			<a href="tort-nunta.html">Tort de Nuntă</a>
+			<a href="tort-aniversar.html">Tort Aniversar</a>
+			<a href="tort-copii.html">Tort pentru Copii</a>
+			<a href="platouri.html">Platouri</a>
+			<a href="comanda.html">Comandă</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveMenu()"><i class="fa fa-bars"></i></a>
+		</div>
+	</div>
+	<hr id="about" />
+	<div class="about_capp">
+		<h2 class="text-center">Tort de Botez – Un Dulce Simbol al Primului Eveniment Special 👶🎂</h2>
+		<img src="../images/tortbotez (2).jpg" alt="tort-botez image" class="img-details right-float" />
+		<p>La Sweetopia, creăm torturi de botez unice, elegante și rafinate, perfecte pentru a marca acest moment
+			deosebit. Fie că preferi un design clasic sau unul modern, realizăm torturi personalizate cu ingrediente
+			premium și decoruri spectaculoase.</p>
+		<p><b>Opțiuni de Personalizare</b></p>
+		<p>🎨 Design tematic: Îngerași, ursuleți, baloane, flori delicate</p>
+		<p>🎂 Blaturi pufoase: Vanilie, ciocolată, fistic, red velvet</p>
+		<p>🍰 Creme fine: Mascarpone cu fructe, ganache de ciocolată, caramel sărat</p>
+		<p>🌟 Detalii speciale: Figurine personalizate, glazuri elegante, accente aurii</p>
+		<p>💡 Visezi un tort deosebit pentru botezul micuțului tău? Spune-ne dorințele tale și vom crea un desert
+			memorabil!</p>
+		<p><b>📅 Comandă acum și îndulcește această zi specială cu Sweetopia!</b></p>
+	</div>
+	<!--subsolul paginii-->
+	<div class="footer">
+		<h3><span class="copy">&copy;</span> Acest website a fost realizat în cadrul concursului<br />
+			"Tekwill Junior Ambassadors" organizat de proiectul <br />"Tekwill în Fiecare Școală"
+		</h3>
+		<p><span id="date"></span></p>
+	</div>
+
+	<script src="js/script_slider.js"></script>
+	<script>
+		// Adaugă doar data curentă, fără anul lângă textul din footer
+		const options = { year: 'numeric', month: 'long', day: 'numeric' };
+		document.getElementById("date").textContent = new Date().toLocaleDateString('ro-RO', options);
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sweetopia</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<script src="https://use.fontawesome.com/767155eaee.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+
+
+<body onload="getYear()">
+
+	<div class="header">
+		<div class="logo">
+			<img src="images/logo.png" alt="Logo" />
+		</div>
+		<div class="nav" id="myNav">
+			<a href="#home" onclick="hideMenu()">Acasă</a>
+			<a href="#about" onclick="hideMenu()">Despre</a>
+			<a href="#products" onclick="hideMenu()">Produse</a>
+			<a href="#contacts" onclick="hideMenu()">Contacte</a>
+
+			<a href="javascript:void(0);" class="icon" onclick="responsiveMenu()"><i class="fa fa-bars"></i></a>
+		</div>
+	</div>
+	<!--slider-->
+	<main>
+
+
+		<section id="Intro">
+			<div class="video-div">
+				<video id="index-video" autoplay muted loop src="resurces/intro.mp4">
+				</video>
+
+
+				<div class="container index-info" data-aos="zoom-in-down">
+					<h1> Sweetopia </h1>
+					<h2> Sweetopia – Locul unde fiecare gust îți îndulcește visul! </h2>
+					<a class="btn-comanda" href="pages/comanda.html">Comandă</a>
+				</div>
+
+			</div>
+		</section>
+
+		<div>
+			<hr id="home" />
+			<br>
+			<div class="home">
+
+				<div class="slideshow-container">
+					<div class="slide anim">
+						<div class="numbertext">1 / 3</div>
+						<img src="images/slide1.jpg">
+						<div class="text">Sweetopia – Magia dulcelui!</div>
+					</div>
+					<div class="slide anim">
+						<div class="numbertext">2 / 3</div>
+						<img src="images/slide2.jpg">
+						<div class="text">Totul este mereu dulce și irezistibil.</div>
+					</div>
+					<div class="slide anim">
+						<div class="numbertext">3 / 3</div>
+						<img src="images/slide3.jpg">
+						<div class="text">Chiar și cea mai simplă prăjitură este o încântare a gustului.</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<hr id="about" />
+				<br>
+				<div class="about">
+
+					<h1>Tortul – dulce răsfăț al momentelor speciale.</h1>
+
+					<div class="main-paragraph text-paragraph">
+						<p>Tortul nu este doar un desert, ci o adevărată expresie a sărbătorii și a rafinamentului
+							culinar.
+							Încă din Antichitate, oamenii au căutat să îndulcească mesele festive, folosind miere,
+							nuci
+							și
+							fructe pentru a crea prăjituri primitive. Primele forme de tort au fost realizate de
+							egiptenii
+							antici, care preparau pâini dulci aromate cu miere. Însă adevăratul progres în arta
+							cofetăriei a
+							avut loc în perioada medievală, când zahărul a devenit mai accesibil, iar brutarii
+							europeni
+							au
+							început să experimenteze cu rețete mai elaborate.
+
+							În secolul al XVII-lea, în Franța și Italia, cofetarii au perfecționat tehnica aluatului
+							aerat
+							și a cremelor fine, dând naștere torturilor elegante pe care le cunoaștem astăzi. În
+							secolul
+							al
+							XIX-lea, odată cu dezvoltarea industriei zahărului și a cuptoarelor moderne, tortul a
+							devenit
+							tot mai sofisticat, iar cofetarii au început să creeze adevărate opere de artă dulce,
+							decorate
+							cu frișcă, ciocolată și glazuri spectaculoase.</p>
+						<p>Astăzi, tortul este nelipsit de la evenimentele importante – fie că este un tort
+							aniversar
+							plin
+							de culoare, un tort de nuntă elegant sau un desert rafinat pentru ocazii speciale. De la
+							clasicul tort de ciocolată până la torturile contemporane cu mousse, fructe exotice și
+							designuri
+							spectaculoase, acest desert rămâne o alegere de suflet pentru iubitorii de dulce din
+							întreaga
+							lume.</p>
+						<div align="center">
+							<video autoplay muted width="80%" height="500px" controls
+								src="resurces/videotext.mp4"></video>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr id="products" />
+			<br>
+			<div class="products">
+				<div class="description_prod">
+					<h1>Produsele noastre</h1>
+					<p>Cele mai solicitate produse de către clienții noștri...</p>
+				</div>
+				<div class="cards_prod">
+					<div class="card">
+						<a href="pages/tort-nunta.html">
+							<div align="center">
+								<img src="images/tortnunta.jpg" alt="Tort de Nuntă" class="photo_prod" />
+							</div>
+							<h3>Tort de Nuntă</h3>
+							<div class="product-text">
+								<p>Un tort elegant, cu mai multe etaje, decorat cu flori sau pastă de zahăr, perfect
+									pentru
+									ziua
+									cea mare.</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="card">
+						<a href="pages/tort-botez.html">
+							<div align="center">
+								<img src="images/tortbotez.jpg" alt="Tort de Botez" class="photo_prod" />
+							</div>
+							<h3>Tort de Botez</h3>
+							<div class="product-text">
+								<p>Delicat și adorabil, decorat pentru a sărbători primul pas al bebelușului în lume.
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="card">
+						<a href="pages/tort-aniversar.html">
+							<div align="center">
+								<img src="images/tortaniversare.jpg" alt="Tort Aniversar" class="photo_prod" />
+							</div>
+							<h3>Tort Aniversar</h3>
+							<div class="product-text">
+								<p>Personalizat cu mesaje speciale și tematici festive, perfect pentru orice vârstă și
+									ocazie.
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="card">
+						<a href="pages/tort-copii.html">
+							<div align="center">
+								<img src="images/4cde31c3-673f-465e-8acd-4ac13df672e9.jpg" alt="Tort pentru Copii"
+									class="photo_prod" />
+							</div>
+							<h3>Tort pentru Copii</h3>
+							<div class="product-text">
+								<p>Colorat și plin de veselie, cu personaje din desene animate, ideal pentru a
+									înfrumuseța
+									petrecerile celor mici.</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="card">
+						<a href="pages/platouri.html">
+							<div align="center">
+								<img src="images/platou.jpg" alt="Platouri" class="photo_prod" />
+							</div>
+							<h3>Platouri</h3>
+							<div class="product-text">
+								<p>Un tort elegant, cu mai multe etaje, decorat cu flori sau pastă de zahăr, perfect
+									pentru
+									ziua
+									cea mare.</p>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!--contactele-->
+		<hr id="contacts" />
+		<br>
+		<div class="row">
+			<h1 align="center">Cum ne găsiți?</h1>
+			<div class="contacts">
+
+				<div class="col-60">
+
+					<ul>
+
+						<h3>
+							<li<span class="ico"><i class="fa fa-map-marker"></i></span><i>strada Livezilor
+									12</i></li>
+						</h3>
+						<br />
+						<h3>
+							<li<span class="ico"><i class="fa fa-at"></i></span><i>enis.natalia@gmail.com</i></li>
+						</h3>
+						<br />
+						<h3>
+							<li<span class="ico"><i class="fa fa-phone"></i></span><i>060431257</i></li>
+						</h3>
+					</ul>
+				</div>
+
+				<div class="col-40">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44666.204869812136!2d28.40862674357659!3d45.597825395292226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b706981a26ac7d%3A0x7ab00f8c2b44a976!2z0JDQu9C10LrRgdCw0L3QtNGA0YMg0JjQvtCw0L0g0JrRg9C30LAsINCc0L7Qu9C00L7QstCw!5e0!3m2!1sru!2s!4v1739995004322!5m2!1sru!2s"
+						width="90%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!--subsolul paginii-->
+	<div class="footer">
+		<h3><span class="copy">&copy;</span> Acest website a fost realizat în cadrul concursului<br />
+			"Tekwill Junior Ambassadors" organizat de proiectul <br />"Tekwill în Fiecare Școală"
+		</h3>
+		<p><span id="date"></span></p>
+	</div>
+
+	<script src="js/script_slider.js"></script>
+	<script>
+		// Adaugă doar data curentă, fără anul lângă textul din footer
+		const options = { year: 'numeric', month: 'long', day: 'numeric' };
+		document.getElementById("date").textContent = new Date().toLocaleDateString('ro-RO', options);
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sweetopia</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+	<script src="https://use.fontawesome.com/767155eaee.js"></script>
+	<script src="../js/scripts.js"></script>
+</head>
+
+<body onload="getYear()">
+	<div class="header">
+		<div class="logo">
+			<img src="../images/logo.png" alt="Logo" />
+		</div>
+		<div class="nav" id="myNav">
+			<a href="../index.html">Acasă</a>
+			<a href="tort-botez.html">Tort de Botez</a>
+			<a href="tort-aniversar.html">Tort Aniversar</a>
+			<a href="tort-copii.html">Tort pentru Copii</a>
+			<a href="platouri.html">Platouri</a>
+			<a href="comanda.html">Comandă</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveMenu()"><i class="fa fa-bars"></i></a>
+		</div>
+	</div>
+	<hr id="about" />
+	<div class="about_capp">
+		<h1 class="text-center">Tort de Nuntă – Eleganță și Răsfăț în Fiecare Strat 💍🎂</h1>
+		<img src="../images/tortnunta2.jpg" alt="tort-nunta image" class="img-details left-float" />
+
+		<p>La Sweetopia, transformăm visul tău dulce în realitate! Fie că îți dorești un tort de nuntă clasic, modern
+			sau extravagant, fiecare creație este realizată cu atenție la detalii, ingrediente premium și un design
+			spectaculos.</p>
+		<p><b>Opțiuni de Personalizare</b></p>
+		<p>💖 Design sofisticat: Dantelă comestibilă, flori naturale, detalii aurii</p>
+		<p>🎂 Blaturi rafinate: Vanilie, ciocolată belgiană, migdale, red velvet</p>
+		<p>🍰 Creme delicate: Mousse de ciocolată, mascarpone cu fructe, caramel sărat</p>
+		<p>✨ Accente de poveste: Păpuși mirii, glazuri fine, perle comestibile</p>
+		<p>💡 Fiecare tort este o operă de artă! Spune-ne tematica nunții tale și vom crea un desert de neuitat.</p>
+		<p><b>📅 Comandă acum și sărbătorește iubirea cu un tort unic de la Sweetopia!</b></p>
+	</div>
+	<!--subsolul paginii-->
+	<div class="footer">
+		<h3><span class="copy">&copy;</span> Acest website a fost realizat în cadrul concursului<br />
+			"Tekwill Junior Ambassadors" organizat de proiectul <br />"Tekwill în Fiecare Școală"
+		</h3>
+		<p><span id="date"></span></p>
+	</div>
+
+	<script src="js/script_slider.js"></script>
+	<script>
+		// Adaugă doar data curentă, fără anul lângă textul din footer
+		const options = { year: 'numeric', month: 'long', day: 'numeric' };
+		document.getElementById("date").textContent = new Date().toLocaleDateString('ro-RO', options);
+	</script>
+
+</body>
+
+</html>

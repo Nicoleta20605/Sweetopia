@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sweetopia</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+	<script src="https://use.fontawesome.com/767155eaee.js"></script>
+	<script src="../js/scripts.js"></script>
+</head>
+
+<body onload="getYear()">
+	<div class="header">
+		<div class="logo">
+			<img src="../images/logo.png" alt="Logo" />
+		</div>
+		<div class="nav" id="myNav">
+			<a href="../index.html">Acasă</a>
+			<a href="tort-nunta.html">Tort de Nuntă</a>
+			<a href="tort-botez.html">Tort de Botez</a>
+			<a href="tort-aniversar.html">Tort Aniversar</a>
+			<a href="platouri.html">Platouri</a>
+			<a href="comanda.html">Comandă</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveMenu()"><i class="fa fa-bars"></i></a>
+		</div>
+	</div>
+	<hr id="about" />
+	<div class="about_capp">
+		<h1 class="text-center">Tort pentru Copii – Magie și Gust în Fiecare Felie! 🎂🎈</h1>
+		<img src="../images/tortcopii.jpg" alt="tort-copii image" class="img-details right-float" />
+		<p>La Sweetopia, creăm torturi spectaculoase pentru cei mici, pline de culoare, personaje îndrăgite și arome
+			delicioase! Fie că e vorba de o zi de naștere, o petrecere tematică sau un eveniment special, realizăm
+			torturi personalizate pentru a aduce bucurie fiecărui copil.</p>
+		<p><b>Opțiuni de Personalizare</b></p>
+		<p>🎨 Design jucăuș: Personaje din desene animate, supereroi, prințese, animale haioase</p>
+		<p>🎂 Blaturi pufoase: Vanilie, ciocolată, fistic, red velvet</p>
+		<p>🍰 Creme delicioase: Ciocolată cu lapte, mascarpone cu fructe, caramel, oreo</p>
+		<p>🌟 Detalii speciale: Figurine 3D, glazuri colorate, decoruri comestibile</p>
+		<p>💡 Vrei un tort care să îi facă pe cei mici să zâmbească? Spune-ne tematica dorită și vom crea un tort de
+			poveste!</p>
+		<p>📅 Comandă acum și transformă aniversarea copilului tău într-o experiență dulce cu Sweetopia!</p>
+	</div>
+	<!--subsolul paginii-->
+	<div class="footer">
+		<h3><span class="copy">&copy;</span> Acest website a fost realizat în cadrul concursului<br />
+			"Tekwill Junior Ambassadors" organizat de proiectul <br />"Tekwill în Fiecare Școală"
+		</h3>
+		<p><span id="date"></span></p>
+	</div>
+
+	<script src="js/script_slider.js"></script>
+	<script>
+		// Adaugă doar data curentă, fără anul lângă textul din footer
+		const options = { year: 'numeric', month: 'long', day: 'numeric' };
+		document.getElementById("date").textContent = new Date().toLocaleDateString('ro-RO', options);
+	</script>
+
+</body>
+
+</html>

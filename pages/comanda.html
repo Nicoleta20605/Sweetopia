@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetopia</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script src="https://use.fontawesome.com/767155eaee.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body onload="getYear()">
+    <div class="header">
+        <div class="logo">
+            <img src="../images/logo.png" alt="Logo" />
+        </div>
+        <div class="nav" id="myNav">
+            <a href="../index.html">Acasă</a>
+            <a href="tort-nunta.html">Tort de Nuntă</a>
+            <a href="tort-botez.html">Tort de Botez</a>
+            <a href="tort-aniversar.html">Tort Aniversar</a>
+            <a href="tort-copii.html">Tort pentru Copii</a>
+            <a href="platouri.html">Platouri</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()"><i class="fa fa-bars"></i></a>
+        </div>
+    </div>
+    <main>
+        <br />
+        <br />
+
+        <section id="comanda-section">
+
+            <div class="section-div">
+
+                <div class="container index-info" data-aos="zoom-in-down">
+
+                    <h1> Sweetopia </h1>
+                    <h2> Descoperă arta dulciurilor!</h2>
+
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <h1 data-aos="fade-up">Răsfățul e la un click distanță!</h1>
+            <div class="container">
+                <div class="comanda-info">
+                    <div class="card-comanda">
+
+                        <h2> Fondatoare</h2>
+                        <div class="fondator">
+                            <div style="overflow:auto;">
+                                <img src="../images/bambaleilo.jpg">
+                                <p>
+                                    În timpul pandemiei, când lumea părea că stă pe loc, eu am găsit un mod neașteptat
+                                    de a umple timpul: făcând torturi. Totul a început ca o glumă – un experiment dulce,
+                                    o încercare fără prea multe așteptări. Dar, spre surprinderea mea, primul tort a
+                                    ieșit mai bine decât credeam. Apoi a urmat al doilea, al treilea... și fiecare a
+                                    devenit tot mai bun.
+                                </p>
+                                <p>În mica mea bucătărie din Alexandru Ioan Cuza, am descoperit o lume plină de gusturi
+                                    și culori. Am învățat rețete, am testat combinații noi, am decorat cu migală, iar
+                                    curând prietenii și familia au început să îmi ceară torturi pentru aniversări și
+                                    evenimente speciale.</p>
+                                <p>Ceea ce a fost cândva o simplă distracție s-a transformat într-o adevărată pasiune.
+                                    Astăzi, Sweetopia nu mai este doar un vis, ci un loc unde fiecare tort spune o
+                                    poveste dulce. Și totul a început dintr-o glumă…</p>
+
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-inscriere" data-aos="fade-up">
+                        <br />
+                        <h2> Plasează o comandă</h2>
+                        <br />
+                        <div class="contact-form">
+                            <form id="orderForm">
+                                <input type="text" id="nume" name="nume" placeholder="Nume " required />
+                                <input type="text" id="prenume" name="prenume" placeholder="Prenume" required />
+                                <input type="email" id="email" name="email" placeholder="Email" required />
+                                <textarea id="mesaj" name="mesaj" rows="4" placeholder="Mesaj" required></textarea>
+                                <hr />
+                                <button type="submit">Transmite</button>
+                            </form>
+
+                            <script>
+                                document.getElementById("orderForm").addEventListener("submit", function (event) {
+                                    event.preventDefault();
+
+                                    let formData = {
+                                        nume: document.getElementById("nume").value,
+                                        prenume: document.getElementById("prenume").value,
+                                        email: document.getElementById("email").value,
+                                        mesaj: document.getElementById("mesaj").value
+                                    };
+
+                                    fetch("https://sheetdb.io/api/v1/xlotsc7ddi01b", {
+                                        method: "POST",
+                                        headers: { "Content-Type": "application/json" },
+                                        body: JSON.stringify({ data: formData })
+                                    })
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            alert("Comanda a fost trimisă cu succes!");
+                                            document.getElementById("orderForm").reset();
+                                        })
+                                        .catch(error => console.error("Eroare:", error));
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Ai o întrebare?</h2>
+                    <div class="fb-comments" data-href="http://tekwill.online/enis-natalia" data-numposts="5"
+                        data-width="100%" data-order-by="reverse_time"></div>
+                </div>
+            </div>
+
+
+
+
+
+            </div>
+        </section>
+
+    </main>
+    <div class="footer">
+        <h3><span class="copy">&copy;</span> Acest website a fost realizat în cadrul concursului<br />
+            "Tekwill Junior Ambassadors" organizat de proiectul <br />"Tekwill în Fiecare Școală"
+        </h3>
+        <p><span id="date"></span></p>
+    </div>
+
+    <script src="js/script_slider.js"></script>
+    <script>
+        // Adaugă doar data curentă, fără anul lângă textul din footer
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("date").textContent = new Date().toLocaleDateString('ro-RO', options);
+    </script>
+
+
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+        var form = document.getElementById('formular');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("formular")),
+            }).then(() => {
+                alert("Multumesc !");
+                form.reset();
+            });
+        });
+    </script>
+
+</body>
+
+
+</html>
